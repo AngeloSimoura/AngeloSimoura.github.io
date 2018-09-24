@@ -91,6 +91,43 @@
             </tr>
 		</table>
 	</div>
+	
+	<div style="font-size: 30px;color: white;margin-top: 20px;text-align: center;"> <form>
+		Nome Completo:
+			<input type="text" name="name" placeholder="Nome"> <br>
+
+   		CPF: 
+   			<input type="text" name="cpf"  placeholder="nnn.nnn.nnn-nn"
+      		pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+      		title="Digite o CPF no formato nnn.nnn.nnn-nn"> <br>
+
+      	Número de Celular: 
+  			<input type="tel" name="usrtel" placeholder="NNNNN-NNNN"
+  			pattern="\d{5}\-\d{4}"
+      		title="Digite o número de celular no formato NNNNN-NNNN"> <br>
+
+      	Número do Cartão: 
+      		<input type="cc-number" name="cartao" placeholder="nnnn nnnn nnnn nnnn"
+      		pattern="\d{4}\d{4}\d{4}\d{4}" 
+      		title="Digite o número do cartão no formato nnnn nnnn nnnn nnnn (sem os espaços)" ><br>
 		
+		Validade do Cartão: 
+			<input type="cc-exp" name="cartao" placeholder="MM-AA"
+			pattern="\d{2}\-\d{2}\"
+			title="Digite a validade no formato MM-AA"> <br>
+
+	 	Data desejada para entrega:
+	 		<input type="date" name="bday">	<br>
+
+		<input type="submit" value="Comprar" onclick="msg()">
+		<input type="reset" value="Apagar">
+	</form>
+	<script>
+		function msg() {
+			alert("ESTE SITE É SOMENTE UM PROJETO, TENTE COMPRAR EM OUTRO SITE ;)");
+		}
+	</script>
+		
+	</div>
 </body>
 </html>
