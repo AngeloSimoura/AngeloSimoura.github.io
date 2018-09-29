@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Notable|Open+Sans+Condensed:700" rel="stylesheet">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<title>Programação - Variáveis</title>
+</head>
+<body id="body"> <meta charset="UTF-8">
+	<div id="title">Tutorial de Programação - Linguagem C</div>
+	<div>
+		<nav>
+	  <ul class="menu">
+	        <li><a href="C:\Users\Angelo\Music\index.html" target="blank">Home</a></li>
+	         <li><a>Categorias</a>
+	            <ul>
+	            	<li><a href="C:\Users\Angelo\Music\variaveis.html" target="blank">Variáveis</a></li>
+	                <li><a href="#">Atribuição</a></li>
+	                <li><a href="#">Condição</a></li> 
+	                <li><a href="#">Repetição</a></li>                    
+	            </ul>
+	        </li>               
+		</ul>
+		</nav>
+	</div>
+	<div id="body3">
+		Repetição
+	</div>
+	<div class="body2">
+		Estrutura de repetição nada mais é que laços de repetições. Laços de repetições permitem que um conjunto de instruções seja repetido até que se faça a condição desejada.A linguagem C suporta aos mesmos tipos de laços que as linguagens de programações modernas, esses laços são For, While, Do While.<br>
+		<br><span class="title2"> Laço FOR </span><br>
+		<pre><span class="body2">
+Laço utilizado geralmente quando existe um término definido, sempre vai ter um fim definido para esse laço implementado no inicio.<br></span>
+<code class="code1">For (variável de inicialização; condição; incremento)</code><br><span class="body2">
+Variável de inicialização: comando de atribuição que inicia uma variável que faz o controle do laço.
+
+Condição: expressão usada que determinará o final do laço.
+
+Incremento: define a variável de controle e muda a cada passada no laço.
+	</span>
+<code class="code1">
+main(){                             
+	int i;                      
+	for (i=0; i< 10; i++){      
+		printf(""%d\n", i");
+	}                           
+}                                   
+</code></pre>
+<br><span class="title2"> Laço WHILE </span><br>
+<pre><span class="body2">
+Laço que pode ter uma condição de termino definida já no inicio ou não.
+Necessariamente ele testa a condição e se caso for verdadeiro executa o bloco abaixo, caso seja falso ele vai para a próxima instrução fora do laço.
+</span>
+<code class="code1">
+main(){                   
+    int i=0;              
+    while(i < 10){        
+       i = i+1;           
+       printf ("%d\n", i);
+    }                     
+}                         
+</code>
+</pre>
+<br><span class="title2"> Laço DO-WHILE </span><br>
+<pre><span class="body2">
+Laço quase igual ao While, a diferença é que primeiro ele executa um bloco e testa a condição, caso seja falsa vai para o próxima instrução.
+</span>
+<code class="code1">
+int main(){                       
+	int i=0;                  
+	do{                       
+		i++;              
+		printf("%d\n", i);
+	}                         
+	while(i <= 10);           
+}                                 
+</code>
+</div>	
+
+
+</body>
+</html>

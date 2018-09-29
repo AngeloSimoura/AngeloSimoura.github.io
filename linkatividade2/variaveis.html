@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Notable|Open+Sans+Condensed:700" rel="stylesheet">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<title>Programação - Variáveis</title>
+</head>
+<body id="body"> <meta charset="UTF-8">
+	<div id="title">Tutorial de Programação - Linguagem C</div>
+	<div>
+		<nav>
+	  <ul class="menu">
+	        <li><a href="C:\Users\Angelo\Music\index.html" target="blank">Home</a></li>
+	         <li><a>Categorias</a>
+	            <ul>
+	            	<li><a href="C:\Users\Angelo\Music\variaveis.html" target="blank">Variáveis</a></li>
+	                <li><a href="#">Atribuição</a></li>
+	                <li><a href="#">Condição</a></li> 
+	                <li><a href="#">Repetição</a></li>                    
+	            </ul>
+	        </li>               
+		</ul>
+		</nav>
+	</div>
+	<div id="body3">
+		Variavéis
+	</div>
+	<div class="body2">
+		Variável é um local reservado na memória para armazenar um tipo de dado. Toda variável deve ter um identificador,ou seja um nome. <br>Além de ter um nome, a variável também precisa ter um tipo. O tipo de dado de uma variável determina o que ela é capaz de armazenar.<br>
+		<br><span class="title2"> Tipos de dados mais comuns em linguagem C </span><br><br>
+		<pre>
+- Todas as variáveis em C tem um tipo;
+- Cada tipo define os valores que a variável pode armazenar;
+- Cada tipo ocupa uma certa quantidade de nemória.
+		</pre>
+		<p> <table class="table1" border="1">
+			<th width="100"> Tipo </th> <th> Valores Válidos</th>
+				<tr>
+					<td> char </td><td>	letras e símbolos:   'a',  'b', 'H', '^', '*','1','0'</td></tr>
+				<tr>
+					<td> int </td><td>	de -32767 até 32767 (apenas números inteiros)</td></tr>
+				<tr>
+					<td> float </td><td> de -3.4 x 1038 até +3.4 x 10+38com até 6 dígitos de precisão</td></tr>
+				<tr>
+					<td> double </td><td> de -1.7 x 10308 até +1.7 x 10+308com até 10 dígitos de precisão</td><tr>
+					
+			</table></p><br>
+		<br><span class="title2">Declaração de variáveis</span><br>
+<pre>
+Devemos observar algumas regras para criar os identificadores das variáveis.
+<span style="font-weight: bold;"> O nome de uma variável deve sempre iniciar com uma letra ou com _ , 
+jamais deve iniciar com um número.</span>
+
+EXEMPLO:
+<code class="code1">
+main(){                                                                                                  
+	float total2; // está correto                                                                    
+                                                                                                         
+	float 2total; // está errado, pois não iniciou com uma letra.                                    
+                                                                                                         
+	// Como visto, o nome de uma variável pode conter dígitos em qualquer posição, menos na primeira.
+}                                                                                                        
+</code>
+
+<span style="font-weight: bold;">Utilize nomes representativos </span>
+
+
+EXEMPLO:
+<code class="code1">
+main(){                                                                   
+	float salario;                                                    
+                                                                          
+	//Neste exemplo o nome da variável já diz o que ela vai armazenar.
+}                                                                         
+</code>
+
+Lembre-se que a linguagem C é “case sensitive”, isto é as letras maiúsculas e minúsculas fazem diferença,
+pois são tratadas como caracteres diferentes.
+Isso signfica que uma variável declarada como <span style="font-weight: bold;">Total</span> será diferente de <span style="font-weight: bold;">total</span>.
+<br>
+-Todas as variáveis tem que ser declaradas antes de serem usadas;
+-Não há uma inicialização implícita na declaração<br>
+
+EXEMPLO:
+<code class="code1">
+main(){                          
+	//Declaração de variáveis
+	float nota1,nota2;       
+	char nome[50];           
+	int matricula;           
+}                                
+</code>
+</pre>
+
+	</div>	
+
+
+</body>
+</html>
