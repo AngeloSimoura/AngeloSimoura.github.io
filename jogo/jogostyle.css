@@ -1,0 +1,82 @@
+		*{
+		text-align: center;
+		}
+		#title {
+			background-color: black;
+			margin: 0 20% 30px 20%;
+			color: red;
+			font-family: 'Kumar One Outline', cursive;
+			font-size: 40px;
+		}
+		#area { 
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#player, #PC {
+			font-size: 30px;
+			font-family: 'Spicy Rice', cursive;
+			position: relative;
+			flex-grow: 1;
+			border-radius: 5px;
+			width: 100px;
+			padding: 0px;
+			color: #fff;
+		}
+		#pontos, #PC-pontos {
+			font-size: 35px;
+		}
+		#player {
+			background-image: url(images/player.jpg);
+			background-size: 100% 100%;
+		}
+		#PC {
+			background-image: url(images/pc.jpg);
+			background-size: 100% 100%;
+		}
+		#X {
+			color: white;
+			font-size: 50px;
+			width: 70px;
+		}
+
+		ul#escolha, ul#PC-escolha {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		ul#escolha li, ul#PC-escolha li {
+			display: inline;
+		}
+		ul#escolha li a , ul#PC-escolha li a {
+			opacity: .6;			
+		}
+		ul#escolha li a:hover, ul#escolha li a.escolheu, ul#PC-escolha li a.escolheu {
+			opacity: 1;
+		}
+		ul#escolha li a img, ul#PC-escolha li a img {
+			max-width: 190px; 
+			padding-top: 5px;
+			height: 160px;
+		}
+		#resultado {
+			color: white;
+			background-color: black;
+			font-family: 'Allerta Stencil', sans-serif;
+			font-size: 32px;
+			padding: 20px;
+			margin: 30px 30% 0 30%;
+			border-radius: 5px;
+		}
+		#reset {
+			margin-top: 30px;
+			color: red;
+			font-size: 30px;
+			border-radius: 20px;
+		}
+		#made {
+			font-size: 40px;
+			font-family: 'Italianno', cursive;
+			text-align: right;
+			color: white;
+		}

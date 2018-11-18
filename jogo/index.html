@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Italianno|Kumar+One+Outline|Spicy+Rice" rel="stylesheet">
+	<title>JOGO</title>
+	<link rel="stylesheet" type="text/css" href="jogostyle.css">
+	<script src="jogoscript.js"></script>
+
+</head>
+<body background="images/background.jpg">
+	<div id="main">
+		<h1 id="title">PEDRA - PAPEL - TESOURA</h1>
+		<div id="area">
+				<div id="player">
+				<h2>Você</h2>
+				<span id="pontos">0</span>
+				<ul id="escolha">
+					<li><a id="escolha_1" onclick="jogo(1)"><img src="images/pedra.png" alt="pedra"></a></li>
+					<li><a id="escolha_2" onclick="jogo(2)"><img src="images/papel.png" alt="papel"></a></li>
+					<li><a id="escolha_3" onclick="jogo(3)"><img src="images/tesoura.png" alt="tesoura"></a></li>
+				</ul>
+			</div>
+
+			<div id="X">X</div>
+
+			<div id="PC">
+				<h2>PC</h2>
+				<span id="PC-pontos">0</span>
+				<ul id="PC-escolha">
+					<li><a id="PC-escolha_1"><img src="images/pedra.png" alt="pedra"></a></li>
+					<li><a id="PC-escolha_2"=""><img src="images/papel.png" alt="papel"></a></li>
+					<li><a id="PC-escolha_3"=""><img src="images/tesoura.png" alt="tesoura"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="resultado">Resultado</div>
+		<button id="reset" onclick="resetar()">ZERAR PLACAR</button>
+		<div id="made">Feito por: Angelo Simoura</div>
+	</div>
+</body>
+</html>
