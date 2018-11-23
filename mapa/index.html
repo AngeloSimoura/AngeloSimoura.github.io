@@ -7,7 +7,7 @@
    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
 	   		integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
-	   		crossorigin=""> 	
+	   		crossorigin="">
 	   </script>
 	   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
 	<title>MAPA</title>
@@ -19,7 +19,7 @@
 	<p><input type="text" id="longuser" placeholder="Longitude"/></p>
 	<button type="button" id="submit">CALCULAR</button>
 	</div>
-	
+
 	<h1>MAPA</h1>
 	<div id="map" style="height: 500px"></div>
 	<script>
@@ -30,9 +30,10 @@
 		    container: 'map',
 		    id: 'mapbox.streets',
 		    accessToken: 'pk.eyJ1IjoiYW5nZWxvc2ltb3VyYSIsImEiOiJjam9lNWhrMzMydmttM2tubDM1bDdybmw5In0.b66tjB6GE_aL3HGfankLiQ'
-		}).addTo(map); 
+		}).addTo(map);
 		navigator.geolocation.getCurrentPosition(f1);
 		function f1(pos){
+		    var i=0;
 			console.log(pos);
 			var lat = pos.coords.latitude;
 			var long = pos.coords.longitude;
@@ -41,8 +42,9 @@
 			marker.bindPopup("<b>Olá!</b><br> Você está aqui").openPopup();
 			btn = document.getElementById("submit");
  			btn.addEventListener("click",distancia);
- 			 					
+
 			function distancia(){
+			    i++;
 				var x=0;
 				var y=0;
 				x=lat;
@@ -51,8 +53,8 @@
 				var dLat=0;
 				var dLon=0;
 				var aux=0;
-				
-				
+
+
 				var latuser = Number(document.getElementById("latuser").value);
 				var longuser= Number(document.getElementById("longuser").value);
 				var a=latuser;
@@ -69,27 +71,28 @@
 				    dLat = latuser - x;
 				    dLon = longuser - y;
 				    aux = ( (1 - cos(dLat)) +(1 - cos(dLon)) * cos(x) * cos(longuser)) / 2;
-				    dis = diam * Math.asin(Math.sqrt(aux));				      
-				     
+				    dis = diam * Math.asin(Math.sqrt(aux));
+
 				    var polygonPoints = [
-				              [lat, long],				              
+				              [lat, long],
 				              [a, b]];
 				            var poly = L.polygon(polygonPoints).addTo(map);
-				      marker2.bindPopup("<b>Olá!</b><br> Localização Escolhida -> Distancia = " + dis.toFixed(2)  + " KM").openPopup();
-				      				   				  	
-				  
+				      marker2.bindPopup("<b>"+i+"º Cálculo:</b><br><b>Latitude escolhida:</b> "+a+ "</br><b>Longitude escolhida:</b> " +b+" </br><b>Distância:</b> " + dis.toFixed(2)  + " KM").openPopup();
+
+
 				}
-				
+
 			};
 			navigator.geolocation.getCurrentPosition(f1,f2);
 		//ERRO
 		function f2(err){
 			console.warn('ERROR(' + err.code + '): ' + err.message);
 			alert("Você negou o acesso a sua Localização. Recarregue a página e tente novamente.");
-			
+
 		}
-		
+
 		</script>
-		   	
+
 </body>
 </html>
+
