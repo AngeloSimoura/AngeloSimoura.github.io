@@ -33,12 +33,18 @@
 		}).addTo(map);
 		navigator.geolocation.getCurrentPosition(f1);
 		function f1(pos){
+		    var homeIcon = L.icon({
+                iconUrl: 'home.png',
+                iconSize:     [35, 55],
+                iconAnchor:   [18, 49],
+                popupAnchor:  [-5, -45]
+            });
 		    var i=0;
 			console.log(pos);
 			var lat = pos.coords.latitude;
 			var long = pos.coords.longitude;
 			map.setView([lat,long],13);
-			var marker = L.marker([lat, long]).addTo(map);
+			var marker = L.marker([lat, long],{icon: homeIcon}).addTo(map);
 			marker.bindPopup("<b>Olá!</b><br> Você está aqui").openPopup();
 			btn = document.getElementById("submit");
  			btn.addEventListener("click",distancia);
